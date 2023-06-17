@@ -5,7 +5,7 @@ interface GameHeadingProps {
 	gameQuery: GameQuery;
 }
 
-const GameHeading = ({gameQuery}: GameHeadingProps) => {
+export default function GameHeading({gameQuery}: GameHeadingProps) {
 	const heading = `${gameQuery.platform?.name || ""} ${
 		gameQuery.genre?.name || ""
 	} Games`;
@@ -14,6 +14,4 @@ const GameHeading = ({gameQuery}: GameHeadingProps) => {
 			{heading}
 		</Heading>
 	);
-};
-
-export default GameHeading;
+}

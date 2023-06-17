@@ -6,7 +6,7 @@ export interface SearchProps {
 	onSearch: (searchText: string) => void;
 }
 
-const Search = ({onSearch}: SearchProps) => {
+export default function Search({onSearch}: SearchProps) {
 	const ref = useRef<HTMLInputElement>(null);
 
 	return (
@@ -27,6 +27,4 @@ const Search = ({onSearch}: SearchProps) => {
 			</InputGroup>
 		</form>
 	);
-};
-
-export default Search;
+}

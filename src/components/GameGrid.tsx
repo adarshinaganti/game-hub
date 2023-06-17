@@ -9,7 +9,7 @@ interface GameGridProps {
 	gameQuery: GameQuery;
 }
 
-const GameGrid = ({gameQuery}: GameGridProps) => {
+export default function GameGrid({gameQuery}: GameGridProps) {
 	const {data, error, isLoading} = useGames(gameQuery);
 	const skeletons = [1, 2, 3, 4, 5, 6];
 
@@ -34,6 +34,4 @@ const GameGrid = ({gameQuery}: GameGridProps) => {
 			))}
 		</SimpleGrid>
 	);
-};
-
-export default GameGrid;
+}

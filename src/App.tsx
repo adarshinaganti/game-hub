@@ -16,7 +16,7 @@ export interface GameQuery {
 	searchText: string;
 }
 
-function App() {
+export default function App() {
 	const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
 	return (
@@ -72,5 +72,3 @@ function App() {
 		</Grid>
 	);
 }
-
-export default App;

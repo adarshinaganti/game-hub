@@ -8,10 +8,10 @@ interface PlatformSelectorProps {
 	selectedPlatform: Platform | null;
 }
 
-const PlatformSelector = ({
+export default function PlatformSelector({
 	onSelectPlatform,
 	selectedPlatform,
-}: PlatformSelectorProps) => {
+}: PlatformSelectorProps) {
 	const {data, error} = usePlatforms();
 
 	if (error) return null;
@@ -33,6 +33,4 @@ const PlatformSelector = ({
 			</MenuList>
 		</Menu>
 	);
-};
-
-export default PlatformSelector;
+}

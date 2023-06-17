@@ -6,7 +6,10 @@ interface SortSelectorProps {
 	sortOrder: string;
 }
 
-const SortSelector = ({onSelectSortOrder, sortOrder}: SortSelectorProps) => {
+export default function SortSelector({
+	onSelectSortOrder,
+	sortOrder,
+}: SortSelectorProps) {
 	const sortOrders = [
 		{value: "", label: "Relevance"},
 		{value: "-added", label: "Date added"},
@@ -38,6 +41,4 @@ const SortSelector = ({onSelectSortOrder, sortOrder}: SortSelectorProps) => {
 			</MenuList>
 		</Menu>
 	);
-};
-
-export default SortSelector;
+}
