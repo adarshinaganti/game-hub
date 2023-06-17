@@ -10,7 +10,7 @@ export interface Genre {
 }
 
 export default function useGenres() {
-	useQuery({
+	return useQuery({
 		queryKey: ["genres"],
 		queryFn: () =>
 			APIClient.get<FetchResponse<Genre>>("/genres").then(
