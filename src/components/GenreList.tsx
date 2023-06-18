@@ -12,10 +12,13 @@ import getCroppedImageURL from "../services/imageURL";
 
 interface GenreListProps {
 	onSelectGenre: (genre: Genre) => void;
-	selectedGenre: Genre | null;
+	selectedGenreID?: number;
 }
 
-const GenreList = ({onSelectGenre, selectedGenre}: GenreListProps) => {
+export default function GenreList({
+	onSelectGenre,
+	selectedGenreID,
+}: GenreListProps) {
 	const {data, isLoading, error} = useGenres();
 	if (error) return null;
 	if (isLoading) return <Spinner />;
@@ -38,7 +41,7 @@ const GenreList = ({onSelectGenre, selectedGenre}: GenreListProps) => {
 								whiteSpace="normal"
 								textAlign="left"
 								fontWeight={
-									genre.id === selectedGenre?.id
+									genre.id === selectedGenreID
 										? "bold"
 										: "normal"
 								}
@@ -54,6 +57,4 @@ const GenreList = ({onSelectGenre, selectedGenre}: GenreListProps) => {
 			</List>
 		</>
 	);
-};
-
-export default GenreList;
+}
