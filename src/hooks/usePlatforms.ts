@@ -8,7 +8,7 @@ export interface Platform {
 }
 
 export default function usePlatforms() {
-	useQuery({
+	return useQuery({
 		queryKey: ["platforms"],
 		queryFn: () => APIClient.get("/platforms/lists/parents"),
 	});
