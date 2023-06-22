@@ -17,7 +17,7 @@ interface PlatformIconListProps {
 	platforms: Platform[];
 }
 
-export default function PlatformIconList({platforms}: PlatformIconListProps) {
+const PlatformIconList = ({platforms}: PlatformIconListProps) => {
 	const iconMap: {[key: string]: IconType} = {
 		pc: FaWindows,
 		playstation: FaPlaystation,
@@ -41,4 +41,6 @@ export default function PlatformIconList({platforms}: PlatformIconListProps) {
 			))}
 		</HStack>
 	);
-}
+};
+
+export default PlatformIconList;

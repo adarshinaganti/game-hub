@@ -7,7 +7,7 @@ interface EmojiProps {
 	rating: number;
 }
 
-export default function Emoji({rating}: EmojiProps) {
+const Emoji = ({rating}: EmojiProps) => {
 	if (rating < 3) return null;
 
 	const emojiMap: {[key: number]: ImageProps} = {
@@ -17,4 +17,6 @@ export default function Emoji({rating}: EmojiProps) {
 	};
 
 	return <Image {...emojiMap[rating]} marginTop={1} />;
-}
+};
+
+export default Emoji;

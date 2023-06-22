@@ -4,7 +4,7 @@ interface CriticScoreProps {
 	score: number;
 }
 
-export default function CriticScore({score}: CriticScoreProps) {
+const CriticScore = ({score}: CriticScoreProps) => {
 	let color = score >= 75 ? "green" : score >= 60 ? "yellow" : "red";
 
 	return (
@@ -12,4 +12,6 @@ export default function CriticScore({score}: CriticScoreProps) {
 			{score}
 		</Badge>
 	);
-}
+};
+
+export default CriticScore;

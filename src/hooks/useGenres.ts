@@ -11,11 +11,13 @@ export interface Genre {
 	image_background: string;
 }
 
-export default function useGenres() {
+const useGenres = () => {
 	return useQuery({
 		queryKey: ["genres"],
 		queryFn: apiClient.getAll,
 		staleTime: ms("24h"),
 		initialData: genres,
 	});
-}
+};
+
+export default useGenres;

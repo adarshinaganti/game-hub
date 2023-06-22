@@ -9,7 +9,7 @@ interface GameCardProps {
 	game: Game;
 }
 
-export default function GameCard({game}: GameCardProps) {
+const GameCard = ({game}: GameCardProps) => {
 	return (
 		<Card>
 			<Image src={getCroppedImageURL(game.background_image)} />
@@ -27,4 +27,6 @@ export default function GameCard({game}: GameCardProps) {
 			</CardBody>
 		</Card>
 	);
-}
+};
+
+export default GameCard;
