@@ -4,6 +4,7 @@ import ExpandableText from "../components/ExpandableText";
 import useFetchGame from "../hooks/useFetchGame";
 import GameAttributes from "../components/GameAttributes";
 import GameTrailer from "../components/GameTrailer";
+import GameScreenshots from "../components/GameScreenshots";
 
 const GameDetails = () => {
 	const {slug} = useParams();
@@ -18,6 +19,7 @@ const GameDetails = () => {
 			<ExpandableText>{game.description_raw}</ExpandableText>
 			<GameAttributes game={game} />
 			<GameTrailer gameID={game.id} />
+			<GameScreenshots gameID={game.id} />
 		</>
 	);
 };
